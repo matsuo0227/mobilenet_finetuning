@@ -116,7 +116,10 @@ if __name__ == '__main__':
     # VGG16モデルと学習済み重みをロード
     # 今回はfine-tuningなのでinclude_top=False (学習済みの全結合層を含まない)
     input_tensor = Input(shape=(img_rows, img_cols, 3))
-    mobilenet = MobileNet(include_top=False, weights='imagenet', input_shape = None)
+    mobilenet = MobileNet(include_top=False,
+                          weights='imagenet',
+                          input_shape = None,
+                          input_tensor = input_tensor)
     # mobilenet.summary()
 
     # 全結合層の新規構築
