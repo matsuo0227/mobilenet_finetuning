@@ -14,4 +14,11 @@
     - numpy 1.14.3
     - tensorflow-gpu 1.8.0
     - tensorboard 1.8.0
-    
+- ファイルの説明
+  - labels.csv : ラベル(クラス)の画像の番号の範囲が書かれたファイル．
+    - データセットにはimage_0001.jpgからimage_1360.jpgの連番画像が入っている．それをimage_0001.jpgからimage_0080.jpgはTulipといったように定義する．
+  - classes.txt : ラベル(クラス)が列挙されたファイル
+  - setup.py : 学習用データを整理する．
+    - データセットをDL，解凍した後，最初に実行する．
+  - mobilenet_finetuning.py : MobileNetの転移学習を行う．
+  - predict.py : 画像ファイルをコマンドライン引数で取得して推測を行う．
