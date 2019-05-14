@@ -12,8 +12,8 @@
     - Keras-Applications 1.0.2
     - Keras-Preprocessing 1.0.1
     - numpy 1.14.3
-    - tensorflow-gpu 1.8.0
-    - tensorboard 1.8.0
+    - tensorflow-gpu 1.10.0
+    - tensorboard 1.10.0
 - ファイルの説明
   - labels.csv : ラベル(クラス)の画像の番号の範囲が書かれたファイル．
     - データセットにはimage_0001.jpgからimage_1360.jpgの連番画像が入っている．それをimage_0001.jpgからimage_0080.jpgはTulipといったように定義する．
