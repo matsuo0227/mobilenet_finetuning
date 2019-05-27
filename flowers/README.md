@@ -6,14 +6,16 @@
   - CPU : Intel Core i7-8700K
   - GPU : NVIDIA GeForce GTX 1070
   - ライブラリ等
-    - Python 3.6.5
+    - Python 3.6.5 (Anaconda)
     - CUDA 9.0
-    - Keras 2.2.0
-    - Keras-Applications 1.0.2
-    - Keras-Preprocessing 1.0.1
+    - cuDNN 7.3.0
+    - Keras 2.2.4
+    - Keras-Applications 1.0.7
+    - Keras-Preprocessing 1.0.9
     - numpy 1.14.3
-    - tensorflow-gpu 1.10.0
-    - tensorboard 1.10.0
+    - tensorflow 1.12.0
+    - tensorflow-gpu 1.12.0
+    - tensorboard 1.12.2
 - ファイルの説明
   - labels.csv : ラベル(クラス)の画像の番号の範囲が書かれたファイル．
     - データセットにはimage_0001.jpgからimage_1360.jpgの連番画像が入っている．それをimage_0001.jpgからimage_0080.jpgはTulipといったように定義する．
