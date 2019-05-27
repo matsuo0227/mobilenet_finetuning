@@ -199,7 +199,7 @@ if __name__ == '__main__':
         #nb_val_samples=nb_val_samples
         validation_steps=nb_val_samples/batch_size,
         callbacks = [early_stopping, reduce_lr]
-        )
+    )
 
     plot_history_loss(history)
     plt.savefig(os.path.join(result_dir, 'loss_fig.png'))
