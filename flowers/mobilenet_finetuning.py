@@ -167,7 +167,8 @@ if __name__ == '__main__':
         rescale=1.0 / 255,
         shear_range=0.,
         zoom_range=0.,
-        horizontal_flip=False)
+        horizontal_flip=False
+    )
 
     test_datagen = ImageDataGenerator(rescale=1.0 / 255)
 
@@ -178,7 +179,8 @@ if __name__ == '__main__':
         classes=classes,
         class_mode='categorical',
         batch_size=batch_size,
-        shuffle=True)
+        shuffle=True
+    )
 
     test_generator = test_datagen.flow_from_directory(
         test_data_dir,
@@ -187,7 +189,8 @@ if __name__ == '__main__':
         classes=classes,
         class_mode='categorical',
         batch_size=batch_size,
-        shuffle=True)
+        shuffle=True
+    )
 
     # Fine-tuning
     history = model.fit_generator(
@@ -199,7 +202,7 @@ if __name__ == '__main__':
         #nb_val_samples=nb_val_samples
         validation_steps=nb_val_samples/batch_size,
         callbacks = [early_stopping, reduce_lr]
-        )
+    )
 
     plot_history_loss(history)
     plt.savefig(os.path.join(result_dir, 'loss_fig.png'))
@@ -207,6 +210,6 @@ if __name__ == '__main__':
     plot_history_acc(history)
     plt.savefig(os.path.join(result_dir, 'acc_fig.png'))
 
-    model.save_weights(os.path.join(result_dir, 'mobilenet_flowers_finetuning.h5'))
+    model.save_weights(os.path.join(result_dir, 'mobilenet_flowers_finetuning_weights.h5'))
     save_history(history, os.path.join(result_dir, 'mobilenet_flowers_history.txt'))
 
